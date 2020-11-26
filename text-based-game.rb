@@ -28,7 +28,7 @@ if door_open_answer.downcase == "yes"
     putc value
     sleep 0.02
   end
-  slot_machine_answer = gets.chomp
+  gets.chomp
 
   else 
     "game over, you just died".each_char do |value|
@@ -41,69 +41,120 @@ if door_open_answer.downcase == "yes"
 
 end
 
+prompt_one_answer = prompt_one player_name
 
- prompt_one player_name
- 
-prompt_one_answer = prompt_one 
+# p 'here'
+# p prompt_one_answer
+#  print prompt_one_answer
+
 
 def prompt_two answer
-  if slot_machine_answer == "yes"
+    if answer == "yes"
 
-  'You see the numbers on the slot machine slide into place to say ... 1 ... 9 ... 6 ... 9. 
-  1969. 
-  The slot machine immediately turns off and stops playing music. 
-  What does this mean? Suddenly, a gust of wind blows around you and you get very dizzy. 
-  You turn around to the reflective metal wall behind you, and see yourself in the mirror... 
-  you have an afro and are wearing a peace sign necklace. 
-  Welcome to 1969, the summer of love. Would you like to exit the time machine and enter the summer of love? 
-                 ,@@@@@@@@@,
-               @@@@@@@@@@@@@@@
-              @@@@@@@@@@@@@@@@@
-              @@@@@@@@@@@@@@@@@
-               @@@@@_   _@@@@@
-               @@@| o   o |@@@
-                 @|  (_)  |@
-                  \  ___  /
-                  |\_`~`_/|
-             ____/:  `"`  :\____
-           /`}}}}}\       /{{{{{`\
-          /  {{{{{ \     / }}}}}  \
-         /   }}}}}  \.-./  {{{{{   \
-        |    {{{{{  / | \  }}}}}    |
-        |    }}}}}  \/|\/  {{{{{    |
-        |   /{{{{{   '-'   }}}}}\   |'.each_char do |value|
-   putc value
-   sleep 0.05
+    '"You see the numbers on the slot machine slide into place to say ... 1 ... 9 ... 6 ... 9. 
+    1969. 
+    The slot machine immediately turns off and stops playing music. 
+    What does this mean? Suddenly, a gust of wind blows around you and you get very dizzy. 
+    You turn around to the reflective metal wall behind you, and see yourself in the mirror... 
+    you have an afro and are wearing a peace sign necklace. 
+    Welcome to 1969, the summer of love. Would you like to exit the time machine and enter the summer of love? 
+                   ,@@@@@@@@@,
+                 @@@@@@@@@@@@@@@
+                @@@@@@@@@@@@@@@@@
+                @@@@@@@@@@@@@@@@@
+                 @@@@@_   _@@@@@
+                 @@@| o   o |@@@
+                   @|  (_)  |@
+                    \  ___  /
+                    |\_`~`_/|
+              ____/:  `"`  :\____
+             /`}}}}}\       /{{{{{`\
+            /  {{{{{ \     / }}}}}  \
+           /   }}}}}  \.-./  {{{{{   \
+          |    {{{{{  / | \  }}}}}    |
+          |    }}}}}  \/|\/  {{{{{    |
+          |   /{{{{{   "-"     }}}}}\ |
+          
+          
+                Type yes or no!
 
-
-   new_year_answer = gets.chomp 
-   
- end
-else 
-  "game over, you just died".each_char do |value|
+                '.each_char do |value|
     putc value
-    sleep 0.02
+    sleep 0.01
   end
 
-end
+gets.chomp
+
+   else p "You realize the door locked behind you! You can't leave, you're bored and you have nothing left to do but play slots. What do you do?"
+          # Option 1 - play slots
+          # Option 2 - die of boredom - Game Over
+    .each_char do |value|
+      putc value
+      sleep 0.02
+    end
+
+  end
 end
 
-prompt_two prompt_one_answer
+prompt_two_answer = prompt_two prompt_one_answer
+
 
  
+def prompt_three answer
+    if answer == "yes"
+      'Enter the year 1969
+      You realize that the magical time traveling slot machine broke as soon as you played- how will you ever get back to year 2020? You have to find the key to turn the machine back on.
+      As you step outside the time machine you realize you are at Woodstock, the Who is playing, and a stranger offers you some chocolate.. it feels like you havent eaten in years. 
+      Who can turn down free chocolate? Do you eat the chocolate? 
+      
+      type yes or no
+      
+      '
+        .each_char do |value|
+      putc value
+      sleep 0.05
+      end
+
+gets.chomp
+
+      else 
+        "you die (we might out of time)".each_char do |value|
+          putc value
+          sleep 0.02
+        end
+
+    end
+end
+
+prompt_three_answer = prompt_three prompt_two_answer
+
+# prompt_4 
 
 
+def prompt_four answer
+  if answer == "yes"
+    "After you eat the chocolate, everything turns to swirling rainbow colors, and you visualize the location of the key... it's been stuck in your afro all along!
+    # You run back to the time machine capsule, and turn the key in the keyhole. You use your remaining coin to get back to 2020.
+    # As you step outside the time machine onto familiar ground, you feel a sense of relief. Only one thing seems a little out of place. You reach up to wipe the sweat from your brow, and you realize... your hair is still an afro... YOU WIN!".each_char do |value|
+    putc value
+    sleep 0.05
+    end
 
-#  else 
-#    "game over, you just died".each_char do |value|
-#      putc value
-#      sleep 0.02
-#    end
- 
-#  end
+gets.chomp
 
-# end
+    else 
+      "you are saving it for later... you die".each_char do |value|
+        putc value
+        sleep 0.02
+      end
 
+  end
+end
+
+prompt_four_answer = prompt_four prompt_three_answer
+
+# p "here"
+# p prompt_three_answer
 
 
 # 2. Hi, (name) You can see a shiny door in front of you. Would you like to open it?
