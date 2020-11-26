@@ -135,9 +135,48 @@ def prompt_four answer
   if answer == "yes"
     "After you eat the chocolate, everything turns to swirling rainbow colors, and you visualize the location of the key... it's been stuck in your afro all along!
     # You run back to the time machine capsule, and turn the key in the keyhole. You use your remaining coin to get back to 2020.
-    # As you step outside the time machine onto familiar ground, you feel a sense of relief. Only one thing seems a little out of place. You reach up to wipe the sweat from your brow, and you realize... your hair is still an afro... YOU WIN!".each_char do |value|
+    # As you step outside the time machine onto familiar ground, you feel a sense of relief. Only one thing seems a little out of place. You reach up to wipe the sweat from your brow, and you realize... your hair is still an afro... YOU WIN!
+    
+    
+    *    *
+    *         '       *       .  *   '     .           * *
+                                                                '
+        *                *'          *          *        '
+    .           *               |               /
+                '.         |    |      '       |   '     *
+                  \*        \   \             /
+        '          \     '* |    |  *        |*                *  *
+             *      `.       \   |     *     /    *      '
+   .                  \      |   \          /               *
+      *'  *     '      \      \   '.       |
+         -._            `                  /         *
+   ' '      ``._   *                           '          .      '
+    *           *          * .   .      *
+ *  '        *    `-._                       .         _..:='        *
+              .  '      *       *    *   .       _.:--'
+           *           .     .     *         .-'         *
+    .               '             . '   *           *         .
+   *       ___.-=--..-._     *                '               '
+                                   *       *
+                 *        _.'  .'       `.        '  *             *
+      *              *_.-'   .'            `.               *
+                    .'                       `._             *  '
+    '       '                        .       .  `.     .
+        .                      *                  `
+                *        '             '                          .
+      .                          *        .           *  *
+              *        .                                    '
+    
+    
+    
+    
+    
+    
+    
+    
+    ".each_char do |value|
     putc value
-    sleep 0.05
+    sleep 0.01
     end
 
 gets.chomp
